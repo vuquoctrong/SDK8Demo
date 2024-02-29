@@ -1,7 +1,6 @@
 package com.example.demo2602
 
 import android.app.Application
-import com.example.mylibrary.SDKManager
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 

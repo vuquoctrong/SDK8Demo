@@ -20,6 +20,19 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+-dontwarn com.sun.jna.**
+-keep class com.sun.jna.**{*;}
+
+
+#xlog Obfuscation of mars
+-keep class com.tencent.mars.** {
+ public protected private *;
+}
+# Gson Obfuscation
+-keepattributes Annotation
+-keep class sun.misc.Unsafe { *; }
+-keep class com.idea.fifaalarmclock.entity.*
+-keep class com.google.gson.stream.* { *; }
 
 
 -keep class okhttp3.** { *; }
@@ -29,29 +42,29 @@
 -keep class okio.** { *; }
 -dontwarn okio.**
 
--keep class com.viettel.vht.core.utils.**{*;}
--dontwarn com.vht.sdkcore.core.utils.**
-
--keep class com.viettel.vht.sdk.model.** {*;}
--dontwarn com.viettel.vht.sdk.model.**
-
--keep class com.viettel.vht.sdk.ui.jftechaddcamera.model.** {*;}
--dontwarn com.viettel.vht.sdk.ui.jftechaddcamera.model.**
-
--keep class com.viettel.vht.sdk.funtionsdk.** {*;}
--dontwarn com.viettel.vht.sdk.funtionsdk.**
+#-keep class com.viettel.vht.core.utils.**{*;}
+#-dontwarn com.vht.sdkcore.core.utils.**
+#
+#-keep class com.viettel.vht.sdk.model.** {*;}
+#-dontwarn com.viettel.vht.sdk.model.**
+#
+#-keep class com.viettel.vht.sdk.ui.jftechaddcamera.model.** {*;}
+#-dontwarn com.viettel.vht.sdk.ui.jftechaddcamera.model.**
+#
+#-keep class com.viettel.vht.sdk.funtionsdk.** {*;}
+#-dontwarn com.viettel.vht.sdk.funtionsdk.**
 
 -dontwarn com.sun.jna.**
 -keep class com.sun.jna.**{*;}
 
--keep class com.viettel.vht.sdk.module.** {*;}
--dontwarn com.viettel.vht.sdk.module.**
-
--keep class com.vht.sdkcore.module.** {*;}
--dontwarn com.vht.sdkcore.module.**
-
--keep class com.viettel.vht.sdk.network.** {*;}
--dontwarn com.viettel.vht.sdk.network.**
+#-keep class com.viettel.vht.sdk.module.** {*;}
+#-dontwarn com.viettel.vht.sdk.module.**
+#
+#-keep class com.vht.sdkcore.module.** {*;}
+#-dontwarn com.vht.sdkcore.module.**
+#
+#-keep class com.viettel.vht.sdk.network.** {*;}
+#-dontwarn com.viettel.vht.sdk.network.**
 
 -keep class javax.inject.** { *; }
 -keep class dagger.** { *; }
@@ -63,16 +76,16 @@
 -keep class javax.inject.** { *; }
 -keep @dagger.hilt.GeneratesRootInput class * { *; }
 
--keep class com.vht.sdkcore.base.ver2.di.CoroutinesModule
--dontwarn com.vht.sdkcore.base.ver2.di.CoroutinesModule
--keep class com.vht.sdkcore.module.** { *; }
--dontwarn com.vht.sdkcore.module.**
--keep class com.viettel.vht.sdk.di.NavigationModule
--dontwarn com.viettel.vht.sdk.di.NavigationModule
--keep class com.viettel.vht.sdk.notification.** { *; }
--dontwarn com.viettel.vht.sdk.notification.**
--keep class com.viettel.vht.sdk.ui.** { *; }
--dontwarn com.viettel.vht.sdk.ui.**
+#-keep class com.vht.sdkcore.base.ver2.di.CoroutinesModule
+#-dontwarn com.vht.sdkcore.base.ver2.di.CoroutinesModule
+#-keep class com.vht.sdkcore.module.** { *; }
+#-dontwarn com.vht.sdkcore.module.**
+#-keep class com.viettel.vht.sdk.di.NavigationModule
+#-dontwarn com.viettel.vht.sdk.di.NavigationModule
+#-keep class com.viettel.vht.sdk.notification.** { *; }
+#-dontwarn com.viettel.vht.sdk.notification.**
+#-keep class com.viettel.vht.sdk.ui.** { *; }
+#-dontwarn com.viettel.vht.sdk.ui.**
 
 
 -keepclassmembers class * {
@@ -134,12 +147,66 @@
 #Android PdfViewer
 -keep class com.shockwave.**
 
--keep class com.viettel.vht.sdk.**{*;}
--dontwarn com.viettel.vht.sdk.**
--keep class com.vht.sdkcore.**{*;}
--dontwarn com.vht.sdkcore.**
 
--keep class com.viettel.vht.sdk.di.**{*;}
--dontwarn com.viettel.vht.sdk.di.**
 
+#-keep class com.viettel.vht.sdk.di.**{*;}
+#-dontwarn com.viettel.vht.sdk.di.**
+#
+#-keep class com.viettel.vht.sdk.eventbus.**{*;}
+#-dontwarn com.viettel.vht.sdk.eventbus.**
+#
+#-keep class com.viettel.vht.sdk.funtionsdk.**{*;}
+#-dontwarn com.viettel.vht.sdk.funtionsdk.**
+#
+#-keep class com.viettel.vht.sdk.jfmanager.**{*;}
+#-dontwarn com.viettel.vht.sdk.jfmanager.**
+#
+#-keep class com.viettel.vht.sdk.model.**{*;}
+#-dontwarn com.viettel.vht.sdk.model.**
+#
+#-keep class com.viettel.vht.sdk.module.**{*;}
+#-dontwarn com.viettel.vht.sdk.module.**
+#
+#-keep class com.viettel.vht.sdk.navigation.**{*;}
+#-dontwarn com.viettel.vht.sdk.navigation.**
+#
+#-keep class com.viettel.vht.sdk.network.**{*;}
+#-dontwarn com.viettel.vht.sdk.network.**
+#
+#-keep class com.viettel.vht.sdk.ui.**{*;}
+#-dontwarn com.viettel.vht.sdk.ui.**
+#
+#-keep class com.viettel.vht.sdk.utils.**{*;}
+#-dontwarn com.viettel.vht.sdk.utils.**
+#
+#-keep class com.vht.sdkcore.adapter.**{*;}
+#-dontwarn com.vht.sdkcore.adapter.utils.**
+#
+#-keep class com.vht.sdkcore.base.**{*;}
+#-dontwarn com.vht.sdkcore.base.utils.**
+#
+#-keep class com.vht.sdkcore.camera.**{*;}
+#-dontwarn com.vht.sdkcore.camera.utils.**
+#
+#-keep class com.vht.sdkcore.database.**{*;}
+#-dontwarn com.vht.sdkcore.database.utils.**
+#
+#
+#-keep class com.vht.sdkcore.file.**{*;}
+#-dontwarn com.vht.sdkcore.file.**
+#
+#-keep class com.vht.sdkcore.module.**{*;}
+#-dontwarn com.vht.sdkcore.module.**
+#
+#-keep class com.vht.sdkcore.navigationComponent.**{*;}
+#-dontwarn com.vht.sdkcore.navigationComponent.**
+#
+#-keep class com.vht.sdkcore.network.**{*;}
+#-dontwarn com.vht.sdkcore.network.**
+#
+#-keep class com.vht.sdkcore.pref.**{*;}
+#-dontwarn com.vht.sdkcore.pref.**
+#
+#-keep class com.vht.sdkcore.utils.**{*;}
+#-dontwarn com.vht.sdkcore.utils.**
 
