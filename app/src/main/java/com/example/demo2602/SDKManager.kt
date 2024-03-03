@@ -41,8 +41,12 @@ class SDKManager(
                 onFailed?.invoke(messageError)
             }
 
-            override fun onSuccess(token: DeviceDataResponse) {
-                onSuccess?.invoke(token.id ?: "")
+            override fun onSuccess(data: DeviceDataResponse) {
+                val idCamera =  data.id
+                val serial = data.getSerialNumber()
+                val nameCamera = data.name
+                val model = data.getModelCamera()
+                onSuccess?.invoke(data.id ?: "")
             }
 
         })
