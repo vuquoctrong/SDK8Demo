@@ -52,12 +52,5 @@ class SDKManager(
         })
     }
 
-    fun sdkOpenDetailCamera(deleteCamera: ((Boolean) -> Unit)? = null) {
-        vHomeSDKManager.openDetailCameraJF(context, object : VHomeDetailCameraJFSDKListener {
-            override fun onDeleteCameraJF(statusDelete: Boolean) {
-                deleteCamera?.invoke(statusDelete)
-            }
 
-        })
-    }
 }
