@@ -118,8 +118,6 @@ dependencies {
 
     implementation 'com.google.zxing:core:3.5.0'
 
-    implementation 'com.makeramen:roundedimageview:2.3.0'
-
     implementation 'com.google.android.libraries.places:places:3.2.0'
 
 
@@ -129,6 +127,19 @@ dependencies {
 
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.28'
 
+    implementation 'com.google.guava:guava:27.0.1-android'
+
+    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
+
+    implementation 'io.github.ShawnLin013:number-picker:2.4.13'
+// them
+    // VLC Android
+    implementation 'org.videolan.android:libvlc-all:3.3.0-eap05'
+
+    implementation 'com.annimon:stream:1.2.1'
+
+    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+
     def camerax_version = "1.2.2"
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
@@ -136,7 +147,7 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
 
-
     implementation files('libs/vhomesdk-release.aar')
     implementation files('libs/uilibrary-release.aar')
+
 }
