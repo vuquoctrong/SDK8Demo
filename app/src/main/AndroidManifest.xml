@@ -25,16 +25,32 @@
 
         <meta-data
             android:name="APP_UUID"
-            android:value="6391d1a360b238987546d15b" />
+            android:value="@string/string_jf_app_uuid" />
         <meta-data
             android:name="APP_KEY"
-            android:value="b6461fefb0424b66f9085623443d0847" />
+            android:value="@string/string_jf_app_key" />
         <meta-data
             android:name="APP_SECRET"
-            android:value="503bc0203f094edcb8a1e88f5365acd7" />
+            android:value="@string/string_jf_app_secret" />
         <meta-data
             android:name="APP_MOVECARD"
-            android:value="4" />
+            android:value="@string/string_jf_app_movecard" />
+
+        <meta-data
+            android:name="SDK_VHOME_APP_KEY"
+            android:value="@string/string_SDK_VHOME_APP_KEY" />
+
+        <meta-data
+            android:name="SDK_VHOME_APP_SECKEY"
+            android:value="@string/string_SDK_VHOME_APP_SECKEY" />
+
+        <meta-data
+            android:name="SDK_VHOME_BASE_URL"
+            android:value="@string/string_SDK_VHOME_BASE_URL" />
+
+        <meta-data
+            android:name="SDK_VHOME_APP_NAME"
+            android:value="@string/string_SDK_VHOME_APP_NAME" />
     </application>
 
 </manifest>

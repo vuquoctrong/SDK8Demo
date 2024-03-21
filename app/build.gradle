@@ -39,6 +39,30 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix ".dev"
+
+            buildConfigField "String", "JF_APP_UUID", "\"6391d1a360b238987546d15b\""
+            resValue("string", "string_jf_app_uuid", "6391d1a360b238987546d15b")
+
+            buildConfigField "String", "JF_APP_KEY", "\"b6461fefb0424b66f9085623443d0847\""
+            resValue("string", "string_jf_app_key", "b6461fefb0424b66f9085623443d0847")
+
+            buildConfigField "String", "JF_APP_SECRET", "\"503bc0203f094edcb8a1e88f5365acd7\""
+            resValue("string", "string_jf_app_secret", "503bc0203f094edcb8a1e88f5365acd7")
+
+            buildConfigField "String", "JF_APP_MOVECARD", "\"4\""
+            resValue("string", "string_jf_app_movecard", "4")
+
+            buildConfigField "String", "SDK_VHOME_APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
+            resValue("string", "string_SDK_VHOME_APP_KEY", "nlaDOC8uS6Xn7L0JIcPD")
+
+            buildConfigField "String", "SDK_VHOME_APP_SECKEY", "\"yKeMoImiHp9DUXxoGpERza31xSyCWunW\""
+            resValue("string", "string_SDK_VHOME_APP_SECKEY", "yKeMoImiHp9DUXxoGpERza31xSyCWunW")
+
+            buildConfigField "String", "SDK_VHOME_BASE_URL", "\"https://stg-iotapi.viettel.io\""
+            resValue("string", "string_SDK_VHOME_BASE_URL", "https://stg-iotapi.viettel.io")
+
+            buildConfigField "String", "SDK_VHOME_APP_NAME", "\"VhomeSDK\""
+            resValue("string", "string_SDK_VHOME_APP_NAME", "VhomeSDK_test")
         }
         release {
             debuggable true
@@ -46,6 +70,31 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
+
+            buildConfigField "String", "JF_APP_UUID", "\"6391d1a360b238987546d15b\""
+            resValue("string", "string_jf_app_uuid", "6391d1a360b238987546d15b")
+
+            buildConfigField "String", "JF_APP_KEY", "\"b6461fefb0424b66f9085623443d0847\""
+            resValue("string", "string_jf_app_key", "b6461fefb0424b66f9085623443d0847")
+
+            buildConfigField "String", "JF_APP_SECRET", "\"503bc0203f094edcb8a1e88f5365acd7\""
+            resValue("string", "string_jf_app_secret", "503bc0203f094edcb8a1e88f5365acd7")
+
+            buildConfigField "String", "JF_APP_MOVECARD", "\"4\""
+            resValue("string", "string_jf_app_movecard", "4")
+
+            buildConfigField "String", "SDK_VHOME_APP_KEY", "\"nlaDOC8uS6Xn7L0JIcPD\""
+            resValue("string", "string_SDK_VHOME_APP_KEY", "nlaDOC8uS6Xn7L0JIcPD")
+
+            buildConfigField "String", "SDK_VHOME_APP_SECKEY", "\"yKeMoImiHp9DUXxoGpERza31xSyCWunW\""
+            resValue("string", "string_SDK_VHOME_APP_SECKEY", "yKeMoImiHp9DUXxoGpERza31xSyCWunW")
+
+            buildConfigField "String", "SDK_VHOME_BASE_URL", "\"https://stg-iotapi.viettel.io\""
+            resValue("string", "string_SDK_VHOME_BASE_URL", "https://stg-iotapi.viettel.io")
+
+            buildConfigField "String", "SDK_VHOME_APP_NAME", "\"VhomeSDK\""
+            resValue("string", "string_SDK_VHOME_APP_NAME", "VhomeSDK")
+
         }
     }
     compileOptions {

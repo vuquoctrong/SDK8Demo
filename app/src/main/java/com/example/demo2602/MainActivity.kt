@@ -54,8 +54,9 @@ class MainActivity : AppCompatActivity() {
 
             })
         }
+        vHomeSDKManager.setLogcat(false)
         binding.detailCamera.setOnClickListener {
-            vHomeSDKManager.openDetailCameraJF(this, idCamera = "577df1d0-25e7-47d7-986e-464f488e9439"
+            vHomeSDKManager.openDetailCameraJF(this, idCamera = "a04c9579-10eb-4feb-baaa-60ed4b05912e"
                 , serialCamera = "b37149463e75da3e", nameCamera = "b37149463e75da3e", modelCamera = "HC23", object : VHomeDetailCameraJFSDKListener {
                 override fun onDeleteCameraJF(statusDelete: Boolean) {
                     Toast.makeText(
