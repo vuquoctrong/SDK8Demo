@@ -6,20 +6,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addCamera"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add camera"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="add camera"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.162" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tvListCamera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCamera"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="List Camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/detailCamera"
             app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/addCamera"
+           app:layout_constraintTop_toBottomOf="@+id/tvListCamera"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Detail Camera"
             android:layout_width="wrap_content"
@@ -31,6 +43,42 @@
             app:layout_constraintTop_toBottomOf="@+id/detailCamera"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Login Vhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/refreshTokenVHome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginVhome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Refresh Token Vhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetListEvent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/refreshTokenVHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="get list Event JF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeleteEvent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnGetListEvent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Delete Event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReadEvent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteEvent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Read Event"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
