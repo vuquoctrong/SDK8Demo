@@ -184,6 +184,8 @@ dependencies {
     // VLC Android
     implementation 'org.videolan.android:libvlc-all:3.3.0-eap05'
 
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.4.1'
+
     implementation 'com.annimon:stream:1.2.1'
 
     implementation 'androidx.security:security-crypto:1.1.0-alpha06'
