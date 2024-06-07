@@ -6,11 +6,8 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class MainApplication: Application(){
-    @Inject
-    lateinit var sdkManager: SDKManager
 
     override fun onCreate() {
         super.onCreate()
-        SDKVHome.setInstantSDK(sdkManager)
     }
 }

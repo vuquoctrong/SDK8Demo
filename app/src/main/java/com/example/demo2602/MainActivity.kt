@@ -7,17 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.demo2602.databinding.ActivityMainBinding
-import com.viettel.vht.sdk.funtionsdk.VHomeDetailCameraJFSDKListener
-import com.viettel.vht.sdk.funtionsdk.VHomeSDKAddCameraJFListener
-import com.viettel.vht.sdk.funtionsdk.VHomeSDKLoginListener
+import com.viettel.vht.sdk.funtionsdk.VHomeOpenDetailDeviceListener
+import com.viettel.vht.sdk.funtionsdk.VHomeResultListener
 import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
-import com.viettel.vht.sdk.funtionsdk.VHomeSDKRefreshTokenListener
+import com.viettel.vht.sdk.funtionsdk.VResult
+import com.viettel.vht.sdk.funtionsdk.VStatus
 import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.model.DeviceDataResponse
 import com.viettel.vht.sdk.utils.DebugConfig
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import java.util.Calendar
 import java.util.Date
 import javax.inject.Inject
@@ -35,55 +33,92 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         vHomeSDKManager.setLogcat(true)
         binding.addCamera.setOnClickListener {
-            vHomeSDKManager.openAddCameraJF(this, object : VHomeSDKAddCameraJFListener {
-                override fun onFailed(messageError: String) {
-                    Toast.makeText(
-                        this@MainActivity,
-                        "onDeleteCameraJF statusDelete: $messageError",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-
-                override fun onSuccess(data: DeviceDataResponse) {
-                    val idCamera = data.id
-                    val serial = data.getSerialNumber()
-                    val nameCamera = data.name
-                    val model = data.getModelCamera()
-                    Toast.makeText(
-                        this@MainActivity,
-                        "openAddCameraJF onSuccess",
-                        Toast.LENGTH_LONG
-                    ).show()
-                    Log.d(
-                        "Trong",
-                        "openAddCameraJF onSuccess idCamera:$idCamera, serial: $serial, nameCamera:$nameCamera, model:$model"
-                    )
-                }
-
-            })
-
-        }
-        binding.tvListCamera.setOnClickListener {
-            vHomeSDKManager.openListCameraJFVHome()
-        }
-
-        binding.detailCamera.setOnClickListener {
-            vHomeSDKManager.openDetailCameraJF(this,
-                idCamera = "ce031a7f-8887-47a9-aed3-738cf0147c92",
-                serialCamera = "b37149463e75da3e",
-                nameCamera = "b37149463e75da3e",
-                modelCamera = "HC23",
-                object : VHomeDetailCameraJFSDKListener {
-                    override fun onDeleteCameraJF(statusDelete: Boolean) {
+            vHomeSDKManager.openAddDevice(
+                this,
+                object : VHomeResultListener<DeviceDataResponse, String> {
+                    override fun onFailed(error: String?) {
                         Toast.makeText(
                             this@MainActivity,
-                            "onDeleteCameraJF statusDelete: $statusDelete",
+                            "onDeleteCameraJF statusDelete: $error",
                             Toast.LENGTH_LONG
                         ).show()
+                    }
 
+                    override fun onSuccess(data: DeviceDataResponse?) {
+                        val idCamera = data?.id
+                        val serial = data?.getSerialNumber()
+                        val nameCamera = data?.name
+                        val model = data?.getModelCamera()
+                        Toast.makeText(
+                            this@MainActivity,
+                            "openAddCameraJF onSuccess",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        Log.d(
+                            "Trong",
+                            "openAddCameraJF onSuccess idCamera:$idCamera, serial: $serial, nameCamera:$nameCamera, model:$model"
+                        )
                     }
 
                 })
+
+        }
+        binding.tvListCamera.setOnClickListener {
+            vHomeSDKManager.openListDeviceVHome()
+        }
+
+        binding.detailCamera.setOnClickListener {
+            vHomeSDKManager.openDetailDevice(this,
+                serialCamera = "df9f0eea22042945",
+                listener = object : VHomeOpenDetailDeviceListener {
+                    override fun onDeleteDevice(data: VResult<Boolean, String>) {
+                        when (data.status) {
+                            VStatus.SUCCESS -> {
+                                Toast.makeText(
+                                    this@MainActivity,
+                                    "onDeleteCameraJF statusDelete: ${data.data}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+
+                            VStatus.ERROR -> {
+                                Toast.makeText(
+                                    this@MainActivity,
+                                    "onDeleteCameraJF onFailed: ${data.error}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+
+                            else -> {}
+                        }
+                    }
+
+                    override fun onRenameDevice(data: VResult<String, String>) {
+                        when (data.status) {
+                            VStatus.SUCCESS -> {
+                                Toast.makeText(
+                                    this@MainActivity,
+                                    "renameCameraListener onSuccess: ${data.data}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+
+                            }
+
+                            VStatus.ERROR -> {
+                                Toast.makeText(
+                                    this@MainActivity,
+                                    "renameCameraListener onFailed: ${data.error}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+
+                            else -> {}
+                        }
+                    }
+
+                }
+
+            )
         }
 
         binding.loginVhome.setOnClickListener {
@@ -91,21 +126,20 @@ class MainActivity : AppCompatActivity() {
             JFCameraManager.logout()
             vHomeSDKManager.loginAccountVHome(
                 "0986784498",
-                "12345678aA@",
-                object : VHomeSDKLoginListener {
-                    override fun onFailed(var1: Int) {
+                "12345678aB@",
+                listener = object : VHomeResultListener<String, Int> {
+                    override fun onFailed(error: Int?) {
                         Toast.makeText(
                             this@MainActivity,
-                            "sdkOpenAddCameraJF: $var1",
+                            "loginAccountVHome: $error",
                             Toast.LENGTH_LONG
                         ).show()
-
                     }
 
-                    override fun onSuccess(token: String) {
+                    override fun onSuccess(data: String?) {
                         Toast.makeText(
                             this@MainActivity,
-                            "sdkOpenAddCameraJF: $token",
+                            "loginAccountVHome: $data",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -114,20 +148,19 @@ class MainActivity : AppCompatActivity() {
         }
         binding.refreshTokenVHome.setOnClickListener {
             vHomeSDKManager.setRefreshTokenSDKVHome("Ugz5NRjyG5z2nxrKKS248vrUrfaog2yPOpIgvohP",
-                object : VHomeSDKRefreshTokenListener {
-                    override fun onFailed(var1: Int) {
+                object : VHomeResultListener<String, Int> {
+                    override fun onFailed(error: Int?) {
                         Toast.makeText(
                             this@MainActivity,
-                            "setRefreshTokenSDKVHome onFailed: $var1",
+                            "setRefreshTokenSDKVHome onFailed: $error",
                             Toast.LENGTH_LONG
                         ).show()
-
                     }
 
-                    override fun onSuccess(token: String) {
+                    override fun onSuccess(data: String?) {
                         Toast.makeText(
                             this@MainActivity,
-                            "setRefreshTokenSDKVHome onSuccess: $token",
+                            "setRefreshTokenSDKVHome onSuccess: $data",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -146,39 +179,39 @@ class MainActivity : AppCompatActivity() {
             stopSearchDay[Calendar.MINUTE] = 59
             stopSearchDay[Calendar.SECOND] = 59
             lifecycleScope.launchWhenStarted {
-                val list = vHomeSDKManager.getListEventCameraJFByTime(
+                val list = vHomeSDKManager.getListEventDeviceByTime(
                     "b37149463e75da3e",
                     startSearchDay,
                     stopSearchDay
                 )
 
-                DebugConfig.logd("Trong","ListData: $list")
+                DebugConfig.logd("Trong", "ListData: $list")
             }
 
         }
 
         binding.btnDeleteEvent.setOnClickListener {
             lifecycleScope.launchWhenStarted {
-                val deleteResult = vHomeSDKManager.deleteListEventCameraJF(
+                val deleteResult = vHomeSDKManager.deleteListEventDevice(
                     "b37149463e75da3e",
-                  listOf<String>("24498465")
+                    listOf<String>("24498465")
                 )
 
-                DebugConfig.logd("Trong","deleteResult: $deleteResult")
+                DebugConfig.logd("Trong", "deleteResult: $deleteResult")
             }
         }
 
         binding.btnReadEvent.setOnClickListener {
             lifecycleScope.launchWhenStarted {
-                val readResult = vHomeSDKManager.setReadEventCameraJF(
+                val readResult = vHomeSDKManager.setReadEventDevice(
                     "b37149463e75da3e",
                     listOf<String>("244983743")
                 )
-                DebugConfig.logd("Trong","readResult: $readResult")
+                DebugConfig.logd("Trong", "readResult: $readResult")
 
             }
         }
-         vHomeSDKManager.loginJFAccount()
+        vHomeSDKManager.loginJFAccount()
 
     }
 }
