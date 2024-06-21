@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
-import com.example.demo2602.databinding.ActivityMainBinding
 import com.viettel.vht.sdk.funtionsdk.VHomeOpenDetailDeviceListener
 import com.viettel.vht.sdk.funtionsdk.VHomeResultListener
 import com.viettel.vht.sdk.funtionsdk.VHomeSDKManager
@@ -16,6 +15,8 @@ import com.viettel.vht.sdk.jfmanager.JFCameraManager
 import com.viettel.vht.sdk.model.DeviceDataResponse
 import com.viettel.vht.sdk.utils.DebugConfig
 import dagger.hilt.android.AndroidEntryPoint
+import vn.com.rangdong.rallismartv3dev.R
+import vn.com.rangdong.rallismartv3dev.databinding.ActivityMainBinding
 import java.util.Calendar
 import java.util.Date
 import javax.inject.Inject

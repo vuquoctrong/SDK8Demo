@@ -1,0 +1,354 @@
+{
+  "project_info": {
+    "project_number": "308922786374",
+    "project_id": "hirangdong-ae590",
+    "storage_bucket": "hirangdong-ae590.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:aefff2530eee1948f12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.hirangdong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-2ecter37fnjuppsrq1i3p8bqct51n25s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdong",
+            "certificate_hash": "b844baa6f22d92ac777c651cd293df529c4cf84e"
+          }
+        },
+        {
+          "client_id": "308922786374-d4qa3nj9skkanf8j1c10mj7jbbt6evc8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdong",
+            "certificate_hash": "84ccaf678f4b0c0a0c41f1856a559aab7e03a069"
+          }
+        },
+        {
+          "client_id": "308922786374-eum58dspqddr6qruk1km5iu6d1bbq2gr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdong",
+            "certificate_hash": "ef49b92cac4de54bfeab3fa3dba3f13ce24190f5"
+          }
+        },
+        {
+          "client_id": "308922786374-nfniqdkj1qv1fmfnv0i8f6k1gmfel8sg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdong",
+            "certificate_hash": "654ebdbb88fa62e562b794b2f95ad0748af5f4a2"
+          }
+        },
+        {
+          "client_id": "308922786374-pb5ip7nv9sn36fonhe24mhccs8q9ot61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdong",
+            "certificate_hash": "c7502d8d9adcaf6942f772b2ef8b7062b9e75ad4"
+          }
+        },
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:13f4b91f6475b522f12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.hirangdongdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-8dutpkieb999t2tjle8c44j79q0aupfj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "308922786374-c5fn65nfiu4iriq8m6alkms2ocdpt8nr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "ef49b92cac4de54bfeab3fa3dba3f13ce24190f5"
+          }
+        },
+        {
+          "client_id": "308922786374-i3c0rgha9cj2eisbggikakdg9n7nc9r8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "b844baa6f22d92ac777c651cd293df529c4cf84e"
+          }
+        },
+        {
+          "client_id": "308922786374-jgfleoj4cofh4jeobhlv2nofsj22fs86.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "654ebdbb88fa62e562b794b2f95ad0748af5f4a2"
+          }
+        },
+        {
+          "client_id": "308922786374-k7aio6qrauppmlnlkdn61c231b0eoent.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "84ccaf678f4b0c0a0c41f1856a559aab7e03a069"
+          }
+        },
+        {
+          "client_id": "308922786374-nbevu8t0e26bmro6crubldpqpa4j3t7v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongdev",
+            "certificate_hash": "9395db3907b6458635a93fd75c69c5a9da9a3153"
+          }
+        },
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:2ebe70fe14d733d1f12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.hirangdongstaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-2p6bg829mhceql74a094rpvbccp8o8tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongstaging",
+            "certificate_hash": "654ebdbb88fa62e562b794b2f95ad0748af5f4a2"
+          }
+        },
+        {
+          "client_id": "308922786374-63ss4u9fimas3lvsr7k233bjl0q8pp0a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongstaging",
+            "certificate_hash": "84ccaf678f4b0c0a0c41f1856a559aab7e03a069"
+          }
+        },
+        {
+          "client_id": "308922786374-75cnkufnpp5vn3hj0vbe55d477nuugt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongstaging",
+            "certificate_hash": "c7502d8d9adcaf6942f772b2ef8b7062b9e75ad4"
+          }
+        },
+        {
+          "client_id": "308922786374-8r2196hqi912ffa9fql8l2phmd03ohnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongstaging",
+            "certificate_hash": "ef49b92cac4de54bfeab3fa3dba3f13ce24190f5"
+          }
+        },
+        {
+          "client_id": "308922786374-gdaidf3v8n0lluj5r0ms67nl3r287smr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vn.com.rangdong.hirangdongstaging",
+            "certificate_hash": "b844baa6f22d92ac777c651cd293df529c4cf84e"
+          }
+        },
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:13549ff8d84ea6e2f12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.hirangdongstg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:831b82b7ae3ed76ff12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.ralli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308922786374:android:fb555729b988745ef12047",
+        "android_client_info": {
+          "package_name": "vn.com.rangdong.rallismartv3dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc7Zv6bAYvkNZlHU05EEu19u1llUmBafM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308922786374-19fbg9j4j9n5c0cfh6o2jtuulop08hm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "308922786374-364vuu6a3c3fjokti3gi3sf5qi42nsvc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "vn.com.rangdong.rallismart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
