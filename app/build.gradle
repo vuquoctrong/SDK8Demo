@@ -152,6 +152,7 @@ dependencies {
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     implementation files('libs/vhomesdk-release.aar')
     implementation files('libs/uilibrary-release.aar')

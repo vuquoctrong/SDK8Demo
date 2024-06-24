@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
                 })
         }
         binding.refreshTokenVHome.setOnClickListener {
-            vHomeSDKManager.setRefreshTokenSDKVHome("Ugz5NRjyG5z2nxrKKS248vrUrfaog2yPOpIgvohP",
+            vHomeSDKManager.setRefreshTokenSDKVHome("mqwwGvSyNfpeqiihrfcnh0dVWUKp3YypJPSLgJGy",
                 object : VHomeResultListener<String, Int> {
                     override fun onFailed(error: Int?) {
                         Toast.makeText(
