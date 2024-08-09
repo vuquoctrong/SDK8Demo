@@ -54,7 +54,8 @@
 -keep class com.viettel.vht.sdk.funtionsdk.** {*;}
 -dontwarn com.viettel.vht.sdk.funtionsdk.**
 
-
+-keep class android.support.v4.** { *; }
+-dontwarn android.support.v4.**
 
 -dontwarn com.sun.jna.**
 -keep class com.sun.jna.**{*;}
