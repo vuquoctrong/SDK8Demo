@@ -126,8 +126,8 @@ class MainActivity : AppCompatActivity() {
 
             JFCameraManager.logout()
             vHomeSDKManager.loginAccountVHome(
-                "0986784498",
-                "12345678aB@",
+                "0367186850",
+                "123456aB@",
                 listener = object : VHomeResultListener<String, Int> {
                     override fun onFailed(error: Int?) {
                         Toast.makeText(
@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
                 })
         }
         binding.refreshTokenVHome.setOnClickListener {
-            vHomeSDKManager.setRefreshTokenSDKVHome("mqwwGvSyNfpeqiihrfcnh0dVWUKp3YypJPSLgJGy",
+            vHomeSDKManager.setRefreshTokenSDKVHome("Rfg5ZgEj4QpdKrQ0Bew76VkoDoPu4Pc4KBbhmEBQ",
                 object : VHomeResultListener<String, Int> {
                     override fun onFailed(error: Int?) {
                         Toast.makeText(

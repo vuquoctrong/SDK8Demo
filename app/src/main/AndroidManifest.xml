@@ -31,6 +31,13 @@
             </intent-filter>
         </service>
 
+        <meta-data
+            android:name="SDK_VHOME_BASE_URL"
+            android:value="@string/string_SDK_VHOME_BASE_URL" />
+
+        <meta-data
+            android:name="SDK_VHOME_APP_NAME"
+            android:value="@string/string_SDK_VHOME_APP_NAME" />
 
     </application>
 
