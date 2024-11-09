@@ -70,6 +70,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnGetListEvent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Delete Event"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -79,6 +80,34 @@
             app:layout_constraintTop_toBottomOf="@+id/btnDeleteEvent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="Read Event"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCreateShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnReadEvent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="create share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnListDeviceReceivedSharing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCreateShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="List ReceivedSharing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnListShareUserBySerialCamera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnListDeviceReceivedSharing"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="ListShareUserBySerialCamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
