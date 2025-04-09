@@ -40,9 +40,8 @@ android {
     buildTypes {
         debug {
 
-            resValue("string", "string_SDK_VHOME_BASE_URL", "https://stg-iotapi.viettel.io")
+            resValue("string", "string_SDK_VHOME_BASE_URL", "https://vcloudapi.innoway.vn")
             resValue("string", "string_SDK_VHOME_APP_NAME", "VhomeSDK")
-
         }
         release {
             debuggable true

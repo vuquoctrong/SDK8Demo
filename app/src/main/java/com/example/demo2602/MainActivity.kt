@@ -130,8 +130,8 @@ class MainActivity : AppCompatActivity() {
 
             JFCameraManager.logout()
             vHomeSDKManager.loginAccountVHome(
-                "0986784498",
-                "12345678aB@",
+                "0367186850",
+                "123456aA@",
                 listener = object : VHomeResultListener<String, Int> {
                     override fun onFailed(error: Int?) {
                         Toast.makeText(
@@ -153,7 +153,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.refreshTokenVHome.setOnClickListener {
 
-            vHomeSDKManager.setRefreshTokenSDKVHome("S3DNbf0ThJ6jxYMh1rjLY0NL7SIvE6PUaEzekg2S",
+            vHomeSDKManager.setRefreshTokenSDKVHome("vDic3XBs1e3a31tpdrYbe9oPzeDUXg7vwfalqpe5",
                 object : VHomeResultListener<String, Int> {
                     override fun onFailed(error: Int?) {
                         Toast.makeText(
@@ -194,6 +194,30 @@ class MainActivity : AppCompatActivity() {
                 DebugConfig.logd("Trong", "ListData: $list")
             }
 
+        }
+
+        binding.btnAcceptedReceivedShare.setOnClickListener {
+            lifecycleScope.launchWhenStarted {
+                vHomeSDKManager.acceptedReceivedShare("8cc4614519311b43","RD0982811578"
+                    ,object : VHomeResultListener<Boolean, String>{
+                        override fun onFailed(error: String?) {
+                            Toast.makeText(
+                                this@MainActivity,
+                                "Accepted Received Share onFailed: $error",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+                        override fun onSuccess(data: Boolean?) {
+                            Toast.makeText(
+                                this@MainActivity,
+                                "Accepted Received Share onSuccess: $data",
+                                Toast.LENGTH_LONG
+                            ).show()
+                        }
+
+                    })
+            }
         }
 
         binding.btnDeleteEvent.setOnClickListener {
@@ -292,6 +316,27 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
                     Log.d("Trong", "getListShareUserBySerialCamera onSuccess: $data")
+                }
+
+            })
+        }
+
+        binding.btnDeleteShare.setOnClickListener {
+            vHomeSDKManager.deleteReceivedShare("f3c73096a0583ec4","0354758210",object :VHomeResultListener<Boolean,String>{
+                override fun onFailed(error: String?) {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "deleteReceivedShare onFailed: $error",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
+                override fun onSuccess(data: Boolean?) {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "deleteReceivedShare onSuccess: $data",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
 
             })

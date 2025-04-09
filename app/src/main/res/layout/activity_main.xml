@@ -102,12 +102,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnListShareUserBySerialCamera"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnListDeviceReceivedSharing"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="ListShareUserBySerialCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeleteShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnListShareUserBySerialCamera"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Delete share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAcceptedReceivedShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Accepted Received Share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
